@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打印预览</title>
+    <link rel="stylesheet" href="./LabelPrint.css">
+    {% if DEBUG %}
+    <script type="text/javascript" src="./jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="./qrcode.js"></script>
+    {% else %}
+    <script type="text/javascript" src="./jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="./qrcode.min.js"></script>
+    {% endif %}
+    <script type="text/javascript" src="./LN_LabelPrint.js"></script>
+    <style type="text/css">
+        .content {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .plugin-download {
+            float: right;
+            margin: -23px 10px 0 0;
+        }
+
+    </style>
+    <!--为了防止不同版本浏览器间CSS样式的冲突（IE9），需要用到CSS hack技术处理。-->
+
+    <!--[if lte IE 8]>
+    <style type="text/css">
+    </style>
+    <![endif]-->
+
+    <!--[if lte IE 7]>
+    <style type="text/css">
+        .label .label-cell {
+            display: table-cell;
+            vertical-align: middle;
+            position: absolute;
+            top: 50%;
+        }
+
+        .label .label-cell-content {
+            position: relative;
+            top: -50%;
+        }
+
+        .label-icon-chinanet-h {
+            *zoom: expression( this.runtimeStyle['zoom'] = '1',this.innerHTML = '\e900');
+        }
+
+        .label-icon-chinanet-logo {
+            *zoom: expression( this.runtimeStyle['zoom'] = '1',this.innerHTML = '\e901');
+        }
+
+        .label-icon-chinanet-text {
+            *zoom: expression( this.runtimeStyle['zoom'] = '1',this.innerHTML = '\e902');
+        }
+
+        .label-icon-chinanet-v {
+            *zoom: expression( this.runtimeStyle['zoom'] = '1',this.innerHTML = '\e903');
+        }
+
+        .label-icon-chinaunion-logo {
+            *zoom: expression( this.runtimeStyle['zoom'] = '1',this.innerHTML = '\e904');
+        }
+
+        .label-icon-cmcc-h {
+            *zoom: expression( this.runtimeStyle['zoom'] = '1',this.innerHTML = '\e905');
+        }
+
+        .label-icon-cmcc-logo {
+            *zoom: expression( this.runtimeStyle['zoom'] = '1',this.innerHTML = '\e906');
+        }
+
+        .label-icon-cmcc-text {
+            *zoom: expression( this.runtimeStyle['zoom'] = '1',this.innerHTML = '\e907');
+        }
+
+        .label-icon-cmcc-v {
+            *zoom: expression( this.runtimeStyle['zoom'] = '1',this.innerHTML = '\e908');
+        }
+
+    </style>
+    <![endif]-->
+
+</head>
+<body>
+<div class="wrapper">
+    <h3 id="label-preview-title" class="label-preview-title">网页预览</h3>
+    <div class="plugin-download"><a href="DPT1230-LN-3.0.2017.1012.exe" target="_self">插件下载</a></div>
+    <div class="content">
+        <div class="operate-items">
+            <div class="operate-item" id="label-group-currType">
+                <Label class="operate-item-title">当前标签型号：</Label>
+                <span class="operate-item-value" id="label-select-currType"></span>
+            </div>
+            <!-- 选择打印机 -->
+            <div class="operate-item" id="label-group-printer-list" style="display: block;">
+                <Label class="operate-item-title" for="label-select-printer-list">请选择打印机：</Label>
+                <select class="operate-item-value" id="label-select-printer-list">
+                    <option>未检测到打印机</option>
+                </select>
+            </div>
+            <!--横向打印、竖向打印-->
+            <div class="operate-item" id="label-group-orientation">
+                <label class="operate-item-title" for="label-select-orientation">打印方向：</label>
+                <select class="operate-item-value" id="label-select-orientation">
+                    <option value="2">横向打印</option>
+                    <option value="1" selected="selected">竖向打印</option>
+                    <option value="0">180度旋转</option>
+                    <option value="3">270度旋转</option>
+                </select>
+            </div>
+            <!--标签型号-->
+            <div class="operate-item" id="label-group-labelStyle">
+                <label class="operate-item-title" for="label-select-labelStyle">标签型号：</label>
+                <select class="operate-item-value label-update-preview" id="label-select-labelStyle">
+                </select>
+            </div>
+            <div class="operate-item" style="display: block;">
+                <input type="button" class="label-preview-btn" id="label-btn-close" value="关闭">
+                <input type="button" class="label-preview-btn" id="label-btn-show-data" value="查看报文">
+                <input type="button" class="label-preview-btn" id="label-btn-print" value="打印">
+            </div>
+        </div>
+        <!--标签预览展示区域-->
+        <div style="margin: 0 15px;">
+            <div id="label-preview-wrapper" class="label-presentation">
+
+            </div>
+        </div>
+        <!--标签模板库-->
+        <div style="display: none;">
+        </div>
+    </div>
+    <div class="footer-push"></div>
+</div>
+<div class="footer" style="text-align: center;font-size: 3mm;">V1.0</div>
+</body>
+</html>

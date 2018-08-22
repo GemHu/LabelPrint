@@ -1,0 +1,1 @@
+module.exports = {"title":"重庆理念@云南移动资源系统","version":"4.3.180815","date":"2018-08-15","vender":"LN","client":"10086","destName":"LN_LabelPrint","DEBUG":false};

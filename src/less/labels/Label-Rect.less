@@ -1,0 +1,62 @@
+@marginH : 5%;
+@marginV : 5%;
+@logoWidth : 35%;
+@qrcodeWidth : 20%;
+@qrcodeHeight : 60%;
+@qrcodeTextHeight : 15%;
+@color :transparent;
+@headerColor : transparent;
+@fontSize : "5mm";
+@titleSize : "5mm";
+@qrcodeTextSize : "3.5mm";
+
+.create-rect-label(@name, @width, @height, @header, @marginH){
+    .label-@{name}{
+        width: @width;
+        height: @height;
+        background-color: @color;
+        font-size: @fontSize;
+    }
+    .label{
+        .label-@{name}-header{
+            height: @header;
+            background-color: @headerColor;
+        }
+        .label-@{name}-header-logo{
+            left: 3%;
+            width: 26%;
+            top: 12.5%;
+            height: 75%;
+            font-size: 10mm;
+            color: white;
+        }
+        .label-@{name}-header-title{
+            left: @logoWidth;
+            width: 100 - @logoWidth - @marginH;
+        }
+        .label-@{name}-body{
+            top: @header;
+            height: @height - @header;
+        }
+        .label-@{name}-body-text{
+            left: @marginH;
+            width: 100 - @qrcodeWidth - @marginH * 2.5;
+            top: @marginV;
+            height: 100 - @marginV * 2;
+        }
+        .label-@{name}-body-qrcode{
+            left: 100 - @marginH - @qrcodeWidth;
+            width : @qrcodeWidth;
+            top: 100 - @marginV - @qrcodeTextHeight - @qrcodeHeight;
+            height: @qrcodeHeight;
+        }
+        .label-@{name}-body-qrcode-text{
+            left: @marginH;
+            width: 100 - @marginH * 2;
+            top: 100 - @marginV - @qrcodeTextHeight;
+            height: @qrcodeTextHeight;
+            text-align: right;
+            font-size: @qrcodeTextSize;
+        }
+    }
+}

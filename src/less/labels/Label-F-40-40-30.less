@@ -1,0 +1,60 @@
+.label-F-create(@name, @width, @height, @tail){
+    @back-color:white;
+    @border-color:black;
+    @radius:5px;
+    //@logo-color:#023D80;
+    @logo-color:#004FEE;
+    @logo-size:4.5mm;
+
+    .label-F-@{name}{
+        width: @width;
+        height: @height;
+        border: none;
+        font-size: 3.5mm;
+    }
+    .label{
+        .label-F-@{name}-sheet1, .label-F-@{name}-sheet2, .label-F-@{name}-tail {
+            border: solid 1.5px @border-color;
+            border-radius: @radius;
+            background-color: @back-color;
+        }
+        .label-F-@{name}-sheet1, .label-F-@{name}-sheet2 {
+            left: 0;
+            width: @width - @tail;
+        }
+        .label-F-@{name}-sheet1 {
+            border-style: solid solid none solid;
+            top: 0;
+            height: @height / 2;
+        }
+        .label-F-@{name}-sheet2 {
+            top: @height / 2;
+            height: @height / 2;
+            border-style: dashed solid solid solid;
+        }
+        .label-F-@{name}-tail {
+            top: @height / 8;
+            height: @height / 4;
+            border-radius: 0 5px 5px 0;
+            border-style: solid solid solid none;
+            left:@width - @tail + 1;
+            width: @tail - 1;
+        }
+        .label-F-@{name}-logo-lt, .label-F-@{name}-logo-rb {
+            width: 10%;
+            height: 30%;
+            font-size: @logo-size;
+            color: @logo-color;
+        }
+        .label-F-@{name}-logo-lt {
+            left: 3%;
+            top: 10%;
+        }
+        .label-F-@{name}-logo-rb {
+            left: 87%;
+            top: 60%;
+        }
+    }
+}
+
+.label-F-create(~"40-40-30", 350px, 200px, 150px);

@@ -1,0 +1,227 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body{
+  min-width:560px;
+  text-align: center;
+}
+/*垂直居中实现方式*/
+/*
+    <div class="wrapper" style="min-height:100%;">
+        <div class="footer-push" style="height:30px;"></div>    预留出footer同样大小的区域，避免区域重叠
+    </div>
+    <div class="footer" style="height:30px;margin-top:-30px;"></div>
+*/
+body, html{
+  width: 100%;
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+}
+.wrapper .footer-push {
+  height: 30px;
+}
+.footer {
+  margin-top: -30px;
+  height: 30px;
+}
+
+/*功能区样式*/
+.label-preview-title{
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  background-color: #5ba3bb;
+  text-align: center;
+}
+.operate-item {
+  width: auto;
+  margin-top: 10px;
+  display: none;
+}
+.operate-item-title {
+  width: 200px;
+  display: inline-block;
+  text-align: right;
+}
+.operate-item-value {
+  width: 200px;
+  display: inline-block;
+  text-align: left;
+}
+.label-preview-btn{
+  width: 100px;
+  height: 28px;
+  margin: 0 5px;
+}
+/*endregion*/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('./fonts/icomoon.eot?b7fa5w');
+  src:  url('./fonts/icomoon.eot?b7fa5w#iefix') format('embedded-opentype'),
+  url('./fonts/icomoon.ttf?b7fa5w') format('truetype'),
+  url('./fonts/icomoon.woff?b7fa5w') format('woff'),
+  url('./fonts/icomoon.svg?b7fa5w#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="label-icon-"], [class*=" label-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.label-icon-chinanet-h:before {
+  content: "\e900";
+}
+.label-icon-chinanet-logo:before {
+  content: "\e901";
+}
+.label-icon-chinanet-text:before {
+  content: "\e902";
+}
+.label-icon-chinanet-v:before {
+  content: "\e903";
+}
+.label-icon-chinaunion-logo:before {
+  content: "\e904";
+}
+.label-icon-cmcc-h:before {
+  content: "\e905";
+}
+.label-icon-cmcc-logo:before {
+  content: "\e906";
+}
+.label-icon-cmcc-text:before {
+  content: "\e907";
+}
+.label-icon-cmcc-v:before {
+  content: "\e908";
+}
+
+.label-more-expand, .label-more-drop{
+  vertical-align: middle;
+  position: relative;
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 24px 0 0;
+  color: #806f66;
+}
+.label-more-expand:hover, .label-more-drop:hover{
+  color: red;
+}
+.label-more-expand-arrow, .label-more-drop-arrow {
+
+}
+.label-more-expand-arrow{
+
+}
+.label-more-drop-arrow{
+
+}
+.label-more-expand-arrow:hover{
+
+}
+.label-more-drop-arrow:hover{
+
+}
+/* region 通用标签样式 */
+
+.label-presentation{
+  margin: 10px auto;
+  padding: 10px;
+  /*border: solid black 1px;*/
+}
+.label{
+  margin: 10px auto;
+  background-color: white;
+  position: relative;
+  text-align: left;
+  font-size: 5mm;
+  font-weight: normal;
+  border: solid 2px black;
+  font-family: "黑体", serif;
+  word-break: break-all;
+}
+.label div, .label img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.label-qrcode{
+}
+.label-barcode{
+}
+.label-auto-shrink{
+}
+.label-color-red{
+  background-color: #E60013 !important;
+}
+.label-color-blue {
+  background-color: #00A2E9 !important;
+}
+.label-color-yellow {
+  background-color: #FDF700 !important;
+}
+.label-color-white {
+  background-color: white !important;
+}
+.label-color-silver{
+  background-color: #D1D2D4 !important;
+}
+
+.label .label-table, .label-table, .label-center-v, .label .label-center-v{
+  display: table;
+  height: 100%;
+}
+.label .label-cell, .label-cell {
+  position: static;
+  display: table-cell;
+  vertical-align: middle;
+  height: auto;
+  left: 0;
+}
+.label .label-cell-content, .label-cell-content{
+  position: static;
+  height: auto;
+}
+.label-rotate-90{
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.label-rotate-180{
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.label-rotate-270{
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}} {{date}}</title>
+    <script src="./{{vender}}/{{destName}}.js"></script>
+    <script>
+
+        function printLabel(xmlData) {
+            var url = "./{{vender}}/{{destName}}.html"; //预览页面
+            LnPrintEntry.printLabel(xmlData, url);
+        }
+
+        function printTemplate_1() {
+            var xmlData = '<?xml version="1.0" encoding="utf-8" ?>' +
+                '<Data>' +
+                '   <Print>' +
+                '       <LabelType>TCM85_140</LabelType>' +
+                '       <Code>260708010022155166557</Code>' +
+                '       <Text>绿春县俄东新区三楼无线机房</Text>' +
+                '       <Text>机房类型：无线机房</Text>' +
+                '       <Text>所属站点：绿春县俄东新区</Text>' +
+                '       <Text>站号(2G)：HOH4253</Text>' +
+                '       <Text>站号(3G)：无</Text>' +
+                '       <Text>站号(4G)：856932</Text>' +
+                '       <Text>资源编码：260708010022155166557</Text>' +
+                '   </Print>' +
+                '</Data>';
+
+            printLabel(xmlData);
+        }
+
+        function printTemplate_2() {
+            var xmlData = '<?xml version="1.0" encoding="utf-8" ?>' +
+                '<Data>' +
+                '   <Print>' +
+                '       <LabelType>TCM100_45 </LabelType>' +
+                '       <Code>260708010022155166557</Code>' +
+                '       <Text>XXXXXXXXXX机架</Text>' +
+                '       <Text>所属机房：XXXXXXXXXX传输机房</Text>' +
+                '       <Text>机架位置：XX行XX列A面</Text>' +
+                '       <Text>机架编号：XX-XX-A</Text>' +
+                '       <Text>专业：XX</Text>' +
+                '       <Text>资源编码：260708010022155166557</Text>' +
+                '   </Print>' +
+                '</Data>';
+
+            printLabel(xmlData);
+        }
+
+        function printTemplate_3() {
+            var xmlData = '<?xml version="1.0" encoding="utf-8" ?>' +
+                '<Data>' +
+                '   <Print>' +
+                '       <LabelType>TCM90_30 </LabelType>' +
+                '       <Code>260708010022155166557</Code>' +
+                '       <Text>XXXXXXXXXXXX</Text>' +
+                '       <Text>所属机架：XXXXXXXXXXXXXXXXXXX</Text>' +
+                '       <Text>设备类型：XXXXXXXXXXXXXXXXXXX</Text>' +
+                '       <Text>专    业：XXXXXXXXXXXXXXXXXXX</Text>' +
+                '       <Text>资源编码：XXXXXXXXXXXXXXXXXXXX</Text>' +
+                '       <Text>设备厂家：XXXXXXXXXXXXXXXXXXXX</Text>' +
+                '   </Print>' +
+                '</Data>';
+
+            printLabel(xmlData);
+        }
+
+        function printTemplate_4() {
+            var xmlData = '<?xml version="1.0" encoding="utf-8" ?>' +
+                '<Data>' +
+                '   <Print>' +
+                '       <LabelType>TCM90_30_ONU </LabelType>' +
+                '       <Text>XXXXXXXXXXXXXXXXXXX</Text>' +
+                '       <Text>XXXXXXXXXXXXXXXXXXX</Text>' +
+                '       <Text>XXXXXXXXXXXXXXXXXXXX</Text>' +
+                '       <Text>XXXXXXXXXXXXXXXXXXXX</Text>' +
+                '   </Print>' +
+                '</Data>';
+
+            printLabel(xmlData);
+        }
+
+        /**
+         * OLT/ONU
+         * 标签大小：40-40+30；
+         */
+        function printTemplate_5() {
+            var xmlData = '<?xml version="1.0" encoding="utf-8" ?>' +
+                '<Data>' +
+                '   <Print>' +
+                '       <LabelType>GB45_60</LabelType>' +
+                '       <Code>260708010022155166557</Code>' +
+                '       <Text>1024-昭通大山包1F</Text>' +
+                '       <Text>所属机房：XXXXXXXXXXXXXXXXXXX</Text>' +
+                '       <Text>设备类型：XXXXXXXXXXXXXXXXXXX</Text>' +
+                '       <Text>专业：XXXXXXXX</Text>' +
+                '       <Text>资源编码：XXXXXXXXXXXXXXXXXXXX</Text>' +
+                '   </Print>' +
+                '</Data>';
+
+            printLabel(xmlData);
+        }
+
+        function printTemplate_6() {
+            var xmlData = '<?xml version="1.0" encoding="utf-8" ?>' +
+                '<Data>' +
+                '   <Print>' +
+                '       <LabelType>QS_02F</LabelType>' +
+                '       <Text>XXXXXXXXXXXX</Text>' +
+                '       <Text>XXXXXXXXXXXXXXXXXXX</Text>' +
+                '       <Text>XXXXXXXXXXXXXXXXXXX</Text>' +
+                '       <Text>XXXXXXXXXXXXXXXXXXX</Text>' +
+                '   </Print>' +
+                '</Data>';
+
+            printLabel(xmlData);
+        }
+
+        function printTemplate_7() {
+            var xmlData = '<?xml version="1.0" encoding="utf-8" ?>' +
+                '<Data>' +
+                '   <Print>' +
+                '       <LabelType>TCM85_54</LabelType>' +
+                '       <Code>260708010022155166557</Code>' +
+                '       <Text>光缆名称：昆明枢纽楼-昆明广福路架空光缆</Text>' +
+                '       <Text>光缆型号：GYTA2481.3</Text>' +
+                '       <Text>光缆长度：12.3456</Text>' +
+                '       <Text>光缆级别：省内二干</Text>' +
+                '       <Text>资源编码：261234567890123456789</Text>' +
+                '   </Print>' +
+                '</Data>';
+
+            printLabel(xmlData);
+        }
+
+        function printTemplate_8() {
+            var xmlData = '<?xml version="1.0" encoding="utf-8" ?>' +
+                '<Data>' +
+                '   <Print>' +
+                '       <LabelType>P20_15</LabelType>' +
+                '       <Code>260708010022155166557</Code>' +
+                '       <Text>DDM</Text>' +
+                '       <Text>02</Text>' +
+                '   </Print>' +
+                '</Data>';
+
+            printLabel(xmlData);
+        }
+
+        function printTemplate_9() {
+            var xmlData = '<?xml version="1.0" encoding="utf-8" ?>' +
+                '<Data>' +
+                '   <Print>' +
+                '       <LabelType> TCM100_45_GJ </LabelType>' +
+                '       <Code>260708010022155166557</Code>' +
+                '       <Text>XXXXXXXXXXXXXXXXXXX</Text>' +
+                '       <Text>XXXXXXXXXXXXXXXXXXX</Text>' +
+                '       <Text>XXXXXXXXXXXXXXXXXXX</Text>' +
+                '       <Text>XXXXXXXXXXXXXXXXXXXX</Text>' +
+                '   </Print>' +
+                '</Data>';
+
+            printLabel(xmlData);
+        }
+
+    </script>
+    <style type="text/css">
+        body {
+            text-align: center;
+        }
+
+        body > input {
+            width: 380px;
+            height: 23px;
+            margin: 3px auto;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<input onclick="printTemplate_1()" type="button" value="机房、基站标签（SP85-140）"/><br>
+<input onclick="printTemplate_2()" type="button" value="机架标签（SP45-100）"/><br>
+<input onclick="printTemplate_3()" type="button" value="粘贴式设备标签（SP30-90）"/><br>
+<input onclick="printTemplate_4()" type="button" value="粘贴式设备标签2（SP30-90）"/><br>
+<input onclick="printTemplate_5()" type="button" value="悬挂式设备（GB45-60）"/><br>
+<input onclick="printTemplate_6()" type="button" value="尾纤、2M等线缆标签（QS-02F）"/><br>
+<input onclick="printTemplate_7()" type="button" value="光缆（TCM85-54）"/><br>
+<input onclick="printTemplate_8()" type="button" value="ODM/DDM（SP15-20）"/><br>
+<input onclick="printTemplate_9()" type="button" value="光交箱（SP45-100）"/><br>
+</body>
+</html>

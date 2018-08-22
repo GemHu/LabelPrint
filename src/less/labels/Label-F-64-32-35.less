@@ -1,0 +1,46 @@
+.label-F-64-32-35{
+    border: none;
+    width: 495px;
+    height: 160px;
+}
+.label{
+    .label-F-64-32-35-sheet1, .label-F-64-32-35-sheet2, .label-F-64-32-35-tail {
+        border: solid 1.5px darkgray;
+        border-radius: 5px;
+        background-color: white;
+    }
+    .label-F-64-32-35-sheet1{
+        width: 64%;
+        border-style: solid solid none solid;
+        height: 49%;
+    }
+    .label-F-64-32-35-sheet2{
+        width: 64%;
+        top:50%;
+        border-style: dashed solid solid solid;
+        height: 49%;
+    }
+    .label-F-64-32-35-tail{
+        top: 12%;
+        height: 25%;
+        border-radius: 0 5px 5px 0;
+        border-style: solid solid solid none;
+        left: 64.3%;
+        width: 35%;
+    }
+    .label-F-64-32-35-logo(@left : 3%, @top : 10%){
+        left: @left;
+        width: 8%;
+        top: @top;
+        height: 30%;
+        font-size: 4.5mm;
+        /*color: #023D80;*/
+        color: #004FEE;
+    }
+    .label-F-64-32-35-logo-lt{
+        .label-F-64-32-35-logo();
+    }
+    .label-F-64-32-35-logo-rb{
+        .label-F-64-32-35-logo(87%, 60%);
+    }
+}
