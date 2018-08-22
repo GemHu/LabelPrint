@@ -1,2 +1,0 @@
-# LabelPrint
-label printer interface
